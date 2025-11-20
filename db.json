@@ -2,11 +2,14 @@
   "allDonghua": [
     {
       "id": 2,
-      "slug": "perfect-world",
       "title": "Perfect World",
       "poster": "https://picsum.photos/200/300?random=2",
       "synopsis": "Born into a unique world where villages fight to gain power and control, the main character, Shi Hao, is a genius blessed by the heavens born under the poorest of conditions. His clan, however, has a mysterious past.",
-      "genres": ["Action", "Adventure", "Fantasy"],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
       "type": "TV Series",
       "rating": 9.2,
       "isPopular": true,
@@ -15,13 +18,11 @@
       "episodes": [
         {
           "number": 156,
-          "slug": "episode-156-heavenly-passage",
           "title": "Heavenly Passage",
           "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
         },
         {
           "number": 155,
-          "slug": "episode-155-the-beast-tide",
           "title": "The Beast Tide",
           "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
         }
@@ -29,11 +30,15 @@
     },
     {
       "id": 1,
-      "slug": "battle-through-the-heavens",
       "title": "Battle Through The Heavens",
       "poster": "https://picsum.photos/200/300?random=1",
       "synopsis": "In a land where strength rules, Xiao Yan, a genius who suddenly lost his powers, endures three years of ridicule. A mysterious spirit from a ring helps him reclaim his glory and embark on an epic journey of cultivation in a world of dou qi.\n",
-      "genres": ["Action", "Adventure", "Fantasy", "Cultivation"],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Cultivation"
+      ],
       "type": "TV Series",
       "rating": 9.5,
       "isPopular": true,
@@ -42,13 +47,11 @@
       "episodes": [
         {
           "number": 120,
-          "slug": "episode-120-the-flames-power",
           "title": "The Flame's Power",
           "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
         },
         {
           "number": 119,
-          "slug": "episode-119-the-alchemists-test",
           "title": "The Alchemist's Test",
           "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
         }
@@ -56,11 +59,14 @@
     },
     {
       "id": 3,
-      "slug": "soul-land",
       "title": "Soul Land",
       "poster": "https://picsum.photos/200/300?random=3",
       "synopsis": "Tang San, a disciple of the Tang Sect, finds himself reincarnated in a world of spirits and soul masters. He must learn to harness his new powers and uncover the secrets of his past life and his new one.",
-      "genres": ["Action", "Fantasy", "Romance"],
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Romance"
+      ],
       "type": "TV Series",
       "rating": 8.9,
       "isPopular": true,
@@ -69,7 +75,6 @@
       "episodes": [
         {
           "number": 263,
-          "slug": "episode-263-the-final-battle",
           "title": "The Final Battle",
           "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
         }
@@ -77,11 +82,14 @@
     },
     {
       "id": 8,
-      "slug": "the-founder-of-diabolism",
       "title": "The Founder of Diabolism",
       "poster": "https://picsum.photos/200/300?random=11",
       "synopsis": "Wei Wuxian, the grandmaster of demonic cultivation, is resurrected and teams up with the righteous Lan Wangji to solve a series of mysteries and uncover a dark plot.",
-      "genres": ["Action", "Fantasy", "Mystery"],
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Mystery"
+      ],
       "type": "Movie",
       "rating": 9.1,
       "isPopular": false,
@@ -90,7 +98,6 @@
       "episodes": [
         {
           "number": 1,
-          "slug": "movie-part-1",
           "title": "Movie Part 1",
           "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
         }
@@ -98,11 +105,14 @@
     },
     {
       "id": 4,
-      "slug": "apotheosis",
       "title": "Apotheosis",
       "poster": "https://picsum.photos/200/300?random=4",
       "synopsis": "Luo Zheng, once a young master, becomes a human punching bag for his family. He discovers a secret book left by his father and embarks on a path to become a god.",
-      "genres": ["Action", "Fantasy", "Martial Arts"],
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Martial Arts"
+      ],
       "type": "TV Series",
       "rating": 8.5,
       "isPopular": false,
@@ -112,11 +122,14 @@
     },
     {
       "id": 5,
-      "slug": "martial-universe",
       "title": "Martial Universe",
       "poster": "https://picsum.photos/200/300?random=5",
       "synopsis": "Lin Dong, a boy from a small village, discovers a mysterious stone talisman and begins a journey to become one of the most powerful martial artists in the world.",
-      "genres": ["Action", "Adventure", "Cultivation"],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Cultivation"
+      ],
       "type": "TV Series",
       "rating": 8.7,
       "isPopular": true,
@@ -126,11 +139,14 @@
     },
     {
       "id": 6,
-      "slug": "throne-of-seal",
       "title": "Throne of Seal",
       "poster": "https://picsum.photos/200/300?random=6",
       "synopsis": "In a world threatened by demons, a young knight, Long Hao Chen, joins a temple to train and protect humanity, aiming to inherit the legendary Throne of Seal.",
-      "genres": ["Action", "Adventure", "Fantasy"],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
       "type": "TV Series",
       "rating": 8.8,
       "isPopular": false,
@@ -140,13 +156,16 @@
     },
     {
       "id": 7,
-      "slug": "swallowed-star",
       "title": "Swallowed Star",
       "poster": "https://picsum.photos/200/300?random=7",
       "synopsis": "In a post-apocalyptic world, Luo Feng inherits the legacy of a powerful warrior and strives to protect humanity from monstrous creatures and cosmic threats.",
-      "genres": ["Sci-Fi", "Action", "Adventure"],
+      "genres": [
+        "Sci-Fi",
+        "Action",
+        "Adventure"
+      ],
       "type": "TV Series",
-      "rating": 9.0,
+      "rating": 9,
       "isPopular": true,
       "isTopRated": true,
       "updatedAt": "2024-04-16T10:00:00.000Z",
@@ -154,14 +173,38 @@
     }
   ],
   "genres": [
-    { "id": 1, "name": "Action" },
-    { "id": 2, "name": "Adventure" },
-    { "id": 3, "name": "Fantasy" },
-    { "id": 4, "name": "Martial Arts" },
-    { "id": 5, "name": "Romance" },
-    { "id": 6, "name": "Cultivation" },
-    { "id": 7, "name": "Sci-Fi" },
-    { "id": 8, "name": "Mystery" }
+    {
+      "id": 1,
+      "name": "Action"
+    },
+    {
+      "id": 2,
+      "name": "Adventure"
+    },
+    {
+      "id": 3,
+      "name": "Fantasy"
+    },
+    {
+      "id": 4,
+      "name": "Martial Arts"
+    },
+    {
+      "id": 5,
+      "name": "Romance"
+    },
+    {
+      "id": 6,
+      "name": "Cultivation"
+    },
+    {
+      "id": 7,
+      "name": "Sci-Fi"
+    },
+    {
+      "id": 8,
+      "name": "Mystery"
+    }
   ],
   "schedule": [
     {
