@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonghuaFast - Watch Donghua Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white pb-20 lg:pb-0">
+
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="nav-link text-2xl font-bold text-yellow-400">DonghuaFast</a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-6">
+                <a href="/" class="nav-link text-gray-300 hover:text-yellow-400 font-semibold transition duration-300">Home</a>
+                <a href="/donghua" class="nav-link text-gray-300 hover:text-yellow-400 font-semibold transition duration-300">Donghua</a>
+                <a href="/movie" class="nav-link text-gray-300 hover:text-yellow-400 font-semibold transition duration-300">Movies</a>
+                <a href="/genre" class="nav-link text-gray-300 hover:text-yellow-400 font-semibold transition duration-300">Genres</a>
+                <a href="/schedule" class="nav-link text-gray-300 hover:text-yellow-400 font-semibold transition duration-300">Schedule</a>
+            </nav>
+
+            <div id="search-container" class="relative">
+                <button id="search-btn" class="h-10 w-10 flex items-center justify-center text-gray-400 hover:text-white text-lg">
+                    <i class="fa fa-search"></i>
+                </button>
+                <div id="search-popup" class="absolute right-0 top-full mt-2 hidden bg-gray-800 p-2 rounded-lg shadow-lg z-10 w-64 sm:w-72">
+                     <input id="search-input" type="text" placeholder="Search..." class="bg-gray-700 text-white rounded-md py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                     <div id="search-results" class="mt-2 max-h-80 overflow-y-auto"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div id="home-page" class="page-content">
+        <section id="popular-slider-section" class="relative h-60 md:h-96 mb-8 -mt-1">
+            <div id="popular-slider" class="relative w-full h-full overflow-hidden"></div>
+            <button id="slider-prev" class="absolute top-1/2 left-2 md:left-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full h-10 w-10 flex items-center justify-center transition"><i class="fa fa-chevron-left"></i></button>
+            <button id="slider-next" class="absolute top-1/2 right-2 md:right-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full h-10 w-10 flex items-center justify-center transition"><i class="fa fa-chevron-right"></i></button>
+        </section>
+        <main class="container mx-auto px-4 pb-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="flex-grow">
+                    <section class="mb-12">
+                        <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-4 mb-6">Recently Updated</h2>
+                        <div id="latest-episodes-grid" class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-4"></div>
+                    </section>
+                    <section class="mb-12">
+                        <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-4 mb-6">Popular Donghua</h2>
+                        <div id="popular-donghua-grid" class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-4"></div>
+                    </section>
+                </div>
+                <aside class="lg:w-1/4 lg:flex-shrink-0">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold border-l-4 border-yellow-400 pl-4 mb-4">Top Rated</h3>
+                        <ul id="sidebar-popular-list" class="space-y-4"></ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mt-8">
+                        <h3 class="text-xl font-bold border-l-4 border-yellow-400 pl-5 mb-4">Genres</h3>
+                        <div id="genres-list" class="flex flex-wrap gap-2"></div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <div id="donghua-page" class="page-content hidden">
+        <main class="container mx-auto px-4 py-8">
+            <section>
+                <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-4 mb-6">Donghua (TV Series)</h2>
+                <div id="donghua-grid" class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-4"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="movie-page" class="page-content hidden">
+        <main class="container mx-auto px-4 py-8">
+            <section>
+                <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-4 mb-6">Movies</h2>
+                <div id="movie-grid" class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-4"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="genre-page" class="page-content hidden">
+        <main id="genre-page-content" class="container mx-auto px-4 py-8"></main>
+    </div>
+
+    <div id="schedule-page" class="page-content hidden">
+        <main class="container mx-auto px-4 py-8">
+            <section>
+                <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-4 mb-6">Weekly Schedule</h2>
+                <div id="schedule-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="detail-page" class="page-content hidden">
+        <main id="detail-page-content" class="container mx-auto px-4 py-8"></main>
+    </div>
+
+    <div id="player-page" class="page-content hidden">
+        <main id="player-page-content" class="container mx-auto px-4 py-8"></main>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-gray-800 border-t border-gray-700 flex justify-around py-2 z-50">
+        <a href="/" class="nav-link flex flex-col items-center text-center text-yellow-400 font-bold w-1/5">
+            <i class="fa fa-home text-xl mb-1"></i>
+            <span class="text-xs">Home</span>
+        </a>
+        <a href="/donghua" class="nav-link flex flex-col items-center text-center text-gray-400 hover:text-yellow-400 w-1/5">
+            <i class="fa fa-tv text-xl mb-1"></i>
+            <span class="text-xs">Donghua</span>
+        </a>
+        <a href="/movie" class="nav-link flex flex-col items-center text-center text-gray-400 hover:text-yellow-400 w-1/5">
+            <i class="fa fa-film text-xl mb-1"></i>
+            <span class="text-xs">Movie</span>
+        </a>
+        <a href="/genre" class="nav-link flex flex-col items-center text-center text-gray-400 hover:text-yellow-400 w-1/5">
+            <i class="fa fa-tag text-xl mb-1"></i>
+            <span class="text-xs">Genre</span>
+        </a>
+         <a href="/schedule" class="nav-link flex flex-col items-center text-center text-gray-400 hover:text-yellow-400 w-1/5">
+            <i class="fa fa-calendar-alt text-xl mb-1"></i>
+            <span class="text-xs">Schedule</span>
+        </a>
+    </nav>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
